@@ -1,0 +1,15 @@
+version: 1
+frontend:
+    phases:
+        pre-build:
+            commands:
+                - 'cd react_sample && npm ci'
+        build:
+            commands:
+                - 'cd react_sample && npm run build'
+    artifacts:
+        baseDirectory: /
+        files:
+            - '**/*'
+    cache:
+        paths: []
